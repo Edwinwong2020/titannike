@@ -13213,9 +13213,9 @@ pIr6/1kQnFo+81nbAAAAAElFTkSuQmCC
         <span class="c1"># TODO 3</span>
         <span class="c1"># 移除下方的 &#39;pass&#39; 声明</span>
         <span class="c1"># 输入你自己的预测条件</span>
-        <span class="k">if</span> <span class="n">passenger</span><span class="p">[</span><span class="s2">&quot;Sex&quot;</span><span class="p">]</span><span class="o">==</span><span class="s2">&quot;female&quot;</span> <span class="ow">and</span> <span class="n">passenger</span><span class="p">[</span><span class="s2">&quot;Pclass&quot;</span><span class="p">]</span><span class="o">&lt;</span><span class="mi">3</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">passenger</span><span class="p">[</span><span class="s2">&quot;Sex&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;female&quot;</span> <span class="ow">and</span> <span class="n">passenger</span><span class="p">[</span><span class="s2">&quot;Pclass&quot;</span><span class="p">]</span><span class="o">&lt;</span><span class="mi">3</span><span class="p">:</span>
             <span class="n">res</span><span class="o">=</span><span class="mi">1</span>
-        <span class="k">elif</span> <span class="n">passenger</span><span class="p">[</span><span class="s2">&quot;Sex&quot;</span><span class="p">]</span><span class="o">==</span><span class="s2">&quot;female&quot;</span> <span class="ow">and</span> <span class="n">passenger</span><span class="p">[</span><span class="s2">&quot;Fare&quot;</span><span class="p">]</span><span class="o">&lt;</span><span class="mi">32</span><span class="p">:</span>
+        <span class="k">elif</span> <span class="n">passenger</span><span class="p">[</span><span class="s2">&quot;Sex&quot;</span><span class="p">]</span> <span class="o">==</span><span class="s2">&quot;female&quot;</span> <span class="ow">and</span> <span class="n">passenger</span><span class="p">[</span><span class="s2">&quot;Fare&quot;</span><span class="p">]</span><span class="o">&lt;</span><span class="mi">32</span><span class="p">:</span>
             <span class="n">res</span><span class="o">=</span><span class="mi">1</span>
         <span class="k">elif</span> <span class="n">passenger</span><span class="p">[</span><span class="s2">&quot;Age&quot;</span><span class="p">]</span><span class="o">&lt;</span><span class="mi">10</span><span class="p">:</span>
             <span class="n">res</span><span class="o">=</span><span class="mi">1</span>
@@ -13472,7 +13472,8 @@ seqZ1O16twAAAABJRU5ErkJggg==
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>问题4</strong>：请描述你实现80%准确度的预测模型所经历的步骤。您观察过哪些特征？某些特性是否比其他特征更有帮助？你用了什么条件来预测生还结果？你最终的预测的准确率是多少？</p>
-<p><strong>回答</strong>：<em>80.25%</em></p>
+<p><strong>回答</strong>：<em>观察了社会阶层和票价。社会阶层为3的基本都死了，票价在32以外的死亡率也很高.这两个特性是相比于其他特性特点比较明显的，更容易判断得出更高的准确率。所以我选择了pcalss和fare这两个参数。
+判断条件为 3的pclss默认为死亡，票价大于32的也默认为死亡。80.25%</em></p>
 <p><strong>提示</strong>：你需要在下面添加一个代码区域，实现代码并运行来计算准确率。</p>
 
 </div>
